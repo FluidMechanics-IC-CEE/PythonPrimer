@@ -25,6 +25,8 @@ The Taylor-Green vortex is an unsteady flow of decaying vortex with an exact clo
 - **Velocity Fields \($u, v$\)**:
 ```math
   u \quad = \quad \frac{\partial \psi}{\partial y} \quad = \quad \sin(x) \cos(y) e^{-2\nu t}
+```
+```math
   v \quad =\quad-\frac{\partial \psi}{\partial x} \quad = \quad -\cos(x) \sin(y) e^{-2\nu t}
 ```
 
