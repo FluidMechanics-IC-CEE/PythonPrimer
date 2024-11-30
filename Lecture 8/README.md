@@ -24,8 +24,9 @@ The Taylor-Green vortex is an unsteady flow of decaying vortex with an exact clo
 
 - **Velocity Fields \($u, v$\)**:
 ```math
-  u \quad = \quad \frac{\partial \psi}{\partial y} \quad = \quad \sin(x) \cos(y) e^{-2\nu t} \\
-  v \quad = \quad-\frac{\partial \psi}{\partial x} \quad = \quad -\cos(x) \sin(y) e^{-2\nu t}
+  u = \frac{\partial \psi}{\partial y} = \sin(x) \cos(y) e^{-2\nu t},
+  \quad \text{and,} \quad
+  v = -\frac{\partial \psi}{\partial x} = -\cos(x) \sin(y) e^{-2\nu t}
 ```
 
 - **Vorticity ($\omega$) from Velocity Fields**:
@@ -86,7 +87,10 @@ The Taylor-Green vortex is an unsteady flow of decaying vortex with an exact clo
 ```math
      \Phi^{\text{error}}_{i,j} = \left| \phi^*_{i,j} - \phi_{i,j} \right|
 ```
-   - Maximum error over the entire domain, $\Phi^{\text{error}}_{\text{max}} = \max{\{\Phi^{\text{error}}_{i,j}\}}$
+   - Maximum error over the entire domain, 
+```math
+     \Phi^{\text{error}}_{\text{max}} = \max{\{\Phi^{\text{error}}_{i,j}\}}
+```
 
 5. **Plot Results**:
    - Plot velocity and vorticity fields (both theoretical and numerical) along with the velocity quiver.
@@ -94,21 +98,26 @@ The Taylor-Green vortex is an unsteady flow of decaying vortex with an exact clo
 
 ---
 
-## Bad Coding Practices to Avoid
+## BAD Coding Practices to Avoid
 
 ### 1. **No Comments or Documentation**
    - Unexplained logic, lack of variable descriptions, and unclear equations make code hard to follow.
+   - Lack of input variable descriptions and their units (in case of dimensional physical quantities).
+   - Hard for readers to understand the meaning of the variables, functions, complex equations etc.
 
 ### 2. **Poor Variable Naming**
-   - Avoid cryptic names like `t`, `v`, `v_th`.
-   - Use clear, consistent, and descriptive names.
+   - Avoid cryptic names like `p`, `q`, `v_th` etc, for physical parameters.
+   - Use clear, consistent, and descriptive names for parameters and functions.
+   - Abbreviated and unclear names make it hard to understand the logic, and complicate debugging.
 
 ### 3. **Hardcoded Values**
-   - Avoid embedding constants (e.g., grid size, viscosity) directly in the code.
-   - Parameterize for flexibility.
+   - Avoid hard coded value embedding for constants (e.g., grid size, viscosity) directly in the code.
+   - Parameterize for flexibility. Any change (e.g., resolution) should not require editing multiple parts of the code
+   - Avoid hard coded values of universal constants like $\pi$ and $e$, take valuse from available math libraries.
 
 ### 4. **Poor Formatting**
    - Ensure proper indentation, consistent alignment, and readable spacing.
+   - Avoid mixed case and unformatted number in print statements. Use proper formatting.
 
 ### 5. **Unformatted Plots**
    - Include axis labels, descriptive titles, and uniform scaling in plots.
@@ -116,14 +125,12 @@ The Taylor-Green vortex is an unsteady flow of decaying vortex with an exact clo
 ### 6. **No Functions or Modularity**
    - Modularize repetitive logic into reusable functions.
    - Validate inputs for physical constraints.
+   - To make the functions generalized, add checks to validate for incorrect inputs. Add validation for physical constraints (e.g., viscosity must be positive)
 
 ### 7. **Inefficiency**
-   - Explicit loops are computationally expensive for large grids. Avoid explicit loops for operations.
+   - Explicit loops are error-prone and computationally expensive for large grids. Avoid explicit loops for operations.
    - Code is harder to debug and maintain.
    - Use vectorized operations for performance.
-
-### 9. **Repetition:**
-   - Repeatation of coding blocks without using functions.
 
 ### 8. **No Error Handling**
    - The code assumes everything will work without exceptions. On should put checks and handle exceptions gracefully for edge cases or invalid inputs.
