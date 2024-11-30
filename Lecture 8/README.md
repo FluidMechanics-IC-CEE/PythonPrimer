@@ -3,7 +3,7 @@
 This directory contains files and resources related to **Lecture 8**. Below is a summary of its contents:
 
 - `taylor_green_poorly_written.py`: A very poorly written code to compute the flow-field of a Taylor-Greeen vortex. This code has multiple syntax errors and numerical errors. One should never write a code like this.
-- `taylor_green_no_errors.py`: After resolving all the errors in taylor_green_poorly_written.py script.
+- `taylor_green_no_errors.py`: After resolving all the errors in 'taylor_green_poorly_written.py' script.
 - `taylor_green_best.py`: An example script that is written in a much better way following best practice.
 
 The above python scripts demonstrate the common coding mistakes and the best practice coding with example codes that compute the Taylor-Green vortex fields and copares the numerically computed fields with repect to the values obtained from theoretical equations. This document highlights bad coding practices to avoid towards the end.
