@@ -17,9 +17,7 @@ The Taylor-Green vortex is an unsteady flow of decaying vortex with an exact clo
 ### Mathematical Formulation of Taylor-Green Vortex
 
 - **Stream Function \($\psi$\)**:
-```math
-  \psi(x, y, t) = \sin(x) \sin(y) e^{-2\nu t} ,
-```
+  $$\psi(x, y, t) = \sin(x) \sin(y) e^{-2\nu t} ,$$
    where, $x$ and $y$ are the Cartesian coordinates in the range $[0, 2\pi]$; $\nu$ is kinematic viscosity, and $t$ indicates time. Based on this stream function, the velocity fields can be derived as,
 
 - **Velocity Fields \($u, v$\)**:
