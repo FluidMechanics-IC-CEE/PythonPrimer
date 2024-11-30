@@ -1,17 +1,3 @@
-<script src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/auto-render.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    renderMathInElement(document.body, {
-      delimiters: [
-        {left: "$$", right: "$$", display: true},
-        {left: "$", right: "$", display: false}
-      ]
-    });
-  });
-</script>
-
 # Lecture 8
 
 This directory contains files and resources related to **Lecture 8**. Below is a summary of its contents:
@@ -19,9 +5,6 @@ This directory contains files and resources related to **Lecture 8**. Below is a
 - `taylor_green_poorly_written.py`: A very poorly written code to compute the flow-field of a Taylor-Greeen vortex. This code has multiple syntax errors and numerical errors. One should never write a code like this.
 - `taylor_green_no_errors.py`: After resolving all the errors in taylor_green_poorly_written.py script.
 - `taylor_green_best.py`: An example script that is written in a much better way following best practice.
-
-
-# Best Practice Coding: Taylor-Green Vortex Example
 
 The above python scripts demonstrate the common coding mistakes and the best practice coding with example codes that compute the Taylor-Green vortex fields and copares the numerically computed fields with repect to the values obtained from theoretical equations. This document highlights bad coding practices to avoid towards the end.
 
@@ -31,26 +14,18 @@ The above python scripts demonstrate the common coding mistakes and the best pra
 
 The Taylor-Green vortex is an unsteady flow of decaying vortex with an exact closed-form analytical solution of the incompressible Navier-Stokes equations in Cartesian coordinates. This makes it an excellent benchmark for validating numerical models.
 
-### Mathematical Formulation
+### Mathematical Formulation of Taylor-Green Vortex
 
-- **Stream Function (\(\psi\))**:
-  \[
-  $$ \psi(x, y, t) = \sin(x) \sin(y) e^{-2\nu t} $$
-  \]
-  where, \(x\) and \(y\) are the Cartesian coordinates in the range \([0, 2\pi]\); \(\nu\) is kinematic viscosity, and \(t\) indicates time. Based on this stream function, the velocity fields can be derived as,
+- **Stream Function \($\psi$\)**:
+  $$ \psi(x, y, t) = \sin(x) \sin(y) e^{-2\nu t} ,$$
+  where, $x$ and $y$ are the Cartesian coordinates in the range $[0, 2\pi]$; $\nu$ is kinematic viscosity, and $t$ indicates time. Based on this stream function, the velocity fields can be derived as,
 
-- **Velocity Fields**:
-  \[
-  u = \frac{\partial \psi}{\partial y}, \quad v = -\frac{\partial \psi}{\partial x}
-  \]
-  \[
-  u = \sin(x) \cos(y) e^{-2\nu t}, \quad v = -\cos(x) \sin(y) e^{-2\nu t}
-  \]
+- **Velocity Fields \($u, v$\)**:
+  $$ u \quad = \quad \frac{\partial \psi}{\partial y} \quad = \quad \sin(x) \cos(y) e^{-2\nu t} $$
+  $$ v \quad =\quad-\frac{\partial \psi}{\partial x} \quad = \quad -\cos(x) \sin(y) e^{-2\nu t} $$
 
-- **Vorticity (\(\omega\)) from Velocity Fields**:
-  \[
-  \omega = \frac{\partial v}{\partial x} - \frac{\partial u}{\partial y} = 2 \sin(x) \sin(y) e^{-2\nu t} = 2 \psi
-  \]
+- **Vorticity ($\omega$) from Velocity Fields**:
+  $$ \omega = \frac{\partial v}{\partial x} - \frac{\partial u}{\partial y} = 2 \sin(x) \sin(y) e^{-2\nu t} = 2 \psi $$
 
 ---
 
