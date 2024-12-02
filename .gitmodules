@@ -1,0 +1,3 @@
+[submodule "Solutions"]
+	path = Solutions
+	url = https://github.com/FluidMechanics-IC-CEE/SolutionsPythonPrimer.git
