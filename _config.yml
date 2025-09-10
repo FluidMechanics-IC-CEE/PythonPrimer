@@ -6,6 +6,7 @@ description: "An introductory Python course for students preparing for computati
 header_pages:
   - index.md
   - lectures.md
+  - about.md
 
 # GitHub Pages settings
 plugins:
@@ -16,8 +17,12 @@ plugins:
 exclude:
   - Solutions/
   - "*/solution_*.py"
+  - "**/solution_*.py"
   - .gitmodules
   - README.md
+  - LICENSE
+  - .gitignore
+  - "*.py"
   
 # Markdown processor
 markdown: kramdown
