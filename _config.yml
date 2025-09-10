@@ -23,6 +23,14 @@ exclude:
   - LICENSE
   - .gitignore
   - "*.py"
+  - vendor/
+  - .bundle/
+  - .sass-cache/
+  - .jekyll-cache/
+  - .jekyll-metadata
+  - node_modules/
+  - Gemfile
+  - Gemfile.lock
   
 # Markdown processor
 markdown: kramdown
