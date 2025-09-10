@@ -94,7 +94,7 @@ tmp/
 # Solution files (keep private)
 **/solution_*.py
 **/Solution*.py
-Solutions/
+# Note: Solutions/ directory is managed as a git submodule
 
 # Jekyll build files
 _site/
