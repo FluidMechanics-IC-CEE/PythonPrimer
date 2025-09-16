@@ -1,0 +1,48 @@
+theme: minima
+title: "Python Primer for Computational Fluid Dynamics"
+description: "An introductory Python course for students preparing for computational fluid dynamics"
+
+# Navigation
+header_pages:
+  - index.md
+  - lectures.md
+  - about.md
+
+# GitHub Pages settings
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Exclude files from build
+exclude:
+  - Solutions/
+  - "*/solution_*.py"
+  - "**/solution_*.py"
+  - .gitmodules
+  - README.md
+  - LICENSE
+  - .gitignore
+  - "*.py"
+  - vendor/
+  - .bundle/
+  - .sass-cache/
+  - .jekyll-cache/
+  - .jekyll-metadata
+  - node_modules/
+  - Gemfile
+  - Gemfile.lock
+  
+# Markdown processor
+markdown: kramdown
+highlighter: rouge
+
+# Social links (optional)
+github_username: FluidMechanics-IC-CEE
+
+# Author information
+author:
+  name: "Imperial College London - Civil & Environmental Engineering"
+  email: ""
+
+# Google Analytics (optional - add your tracking ID)
+# google_analytics: UA-NNNNNNNN-N
